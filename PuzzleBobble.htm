@@ -241,7 +241,10 @@
           // setting the background color
           this.background = game.add.graphics(0, 0)
           this.background.beginFill(0xffffff, 1)
-          this.background.drawRect(0, 0, GAME_WIDTH, GAME_HEIGHT)
+          // the webgl of some android devices loses the color of the bottom
+          // right vertex, which turns the fill into a diagonal gradient, so
+          // the rectangle is oversized to push that corner off the viewport
+          this.background.drawRect(0, 0, GAME_WIDTH * 4, GAME_HEIGHT * 4)
 
           // showing the background image
           document.getElementsByTagName("body")[0].style.background =
