@@ -3,7 +3,7 @@
   "short_name": "Puzzle Bobble",
   "lang": "en-US",
   "start_url": "../PuzzleBobble/PuzzleBobble.htm",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#000",
   "background_color": "#000",
